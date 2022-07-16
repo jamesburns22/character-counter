@@ -25,6 +25,7 @@ const checkIfEbru = () => {
     const mainMessageLower = textInput.value.toLowerCase();
     if (mainMessageLower === "my name is ebru") {
         showIfEbru.classList.replace("ebru-false", "ebru-true")
+        showIfEbru.hidden = false;
     } else (
         showIfEbru.classList.replace("ebru-true", "ebru-false")
     );
