@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: rgb(5, 51, 112);
+    background: rgb(53, 199, 138);
+}
+
+::selection {
+    color: rgb(5, 51, 112);
+    background: rgb(53, 199, 138);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Montserrat Alternates, sans-serif;
+}
+
+html {
+    background-color: #202124;
+    text-align: center;
+}
+
+p {
+    color: #fff;
+}
+
+h1 {
+    font-weight: 500;
+    opacity: 0.9;
+    transition: all 0.3s;
+    color: #fff;
+
+}
+
+h1:hover {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.container {
+    max-width: 1240px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 420px;
+}
