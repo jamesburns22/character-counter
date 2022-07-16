@@ -58,11 +58,35 @@ h1:hover {
 }
 
 .ebru-false {
-    filter: blur(200px);
+    opacity: 0;
+    filter: blur(500px);
     transition: all 1s;
 }
 
 .ebru-true {
+    opacity: 1;
     filter: blur(0px);
     transition: all 1s;
+}
+
+.piglet-false {
+    opacity: 0.1;
+    filter: blur(500px);
+    transition: all 1s;
+}
+
+.piglet-true {
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
+    transform: translateY(-100px);
+}
+
+.piglet-true h1 {
+    color: rgb(207, 60, 60);
+
+}
+
+img {
+    max-width: 300px;
 }
