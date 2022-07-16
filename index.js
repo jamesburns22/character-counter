@@ -22,7 +22,8 @@ function wordCounter() {
 
 
 const checkIfEbru = () => {
-    if (textInput.value === "my name is ebru") {
+    const mainMessageLower = textInput.value.toLowerCase();
+    if (mainMessageLower === "my name is ebru") {
         showIfEbru.classList.replace("ebru-false", "ebru-true")
     } else (
         showIfEbru.classList.replace("ebru-true", "ebru-false")
@@ -30,8 +31,11 @@ const checkIfEbru = () => {
 }
 
 const checkIfPiglet = () => {
-    if (textInput.value === "my name is piglet") {
+    const mainMessageLower = textInput.value.toLowerCase()
+    if (mainMessageLower === "my name is piglet") {
         showIfPiglet.classList.replace("piglet-false", "piglet-true")
+        showIfEbru.hidden = true;
+
     } else (
         showIfPiglet.classList.replace("piglet-true", "piglet-false")
     );

@@ -79,7 +79,6 @@ h1:hover {
     opacity: 1;
     filter: blur(0px);
     transition: all 1s;
-    transform: translateY(-100px);
 }
 
 .piglet-true h1 {
@@ -90,3 +89,9 @@ h1:hover {
 img {
     max-width: 300px;
 }
+
+/* @media only screen and (max-width: 656px) {
+    .piglet-true {
+        transform: translateY(-160px);
+    }
+} */
