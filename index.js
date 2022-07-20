@@ -6,6 +6,49 @@ const showIfEbru = document.getElementById("show-if-ebru");
 const showIfPiglet = document.getElementById("show-if-piglet");
 const upperCaseText = document.getElementById("text-area-uppercaser");
 const lowerCaseText = document.getElementById("text-area-lowercaser");
+const finalMessage = document.getElementById("life-in-weeks-output");
+const userYearsInput = document.getElementById("user-age");
+const years = 90;
+const extraButton = document.getElementById("extra-button");
+const liwChallenge = document.getElementById("life-in-weeks-challenge");
+
+function toggleChallenge() {
+    if (liwChallenge.hidden = false) {
+        liwChallenge.hidden = true;
+    } else {
+        liwChallenge.hidden = false;
+    }
+}
+
+extraButton.addEventListener("click", toggleChallenge)
+
+const updateInput = () => {
+    const submitButton = document.getElementById("user-age-confirm");
+    let lifeSpan = {
+        months: years * 12,
+        weeks: years * 52,
+        days: years * 365,
+    };
+    let userYears = document.getElementById('user-age').value;
+    let userLife = {
+        months: userYears * 12,
+        weeks: userYears * 52,
+        days: userYears * 365,
+    };
+
+    const remainingMonths = lifeSpan.months - userLife.months;
+    const remainingWeeks = lifeSpan.weeks - userLife.weeks;
+    const remainingDays = lifeSpan.days - userLife.days;
+
+
+    function printUserYears() {
+        updateInput();
+        finalMessage.innerHTML = `You Have <span class="empha-numbers">${remainingMonths}</span> months, <span class="empha-numbers">${remainingWeeks}</span> weeks, <span class="empha-numbers">${remainingDays}</span> days left to live assuming you'll live until you are 90`;
+    }
+    submitButton.addEventListener('click', printUserYears);
+}
+userYearsInput.addEventListener('change', updateInput)
+
 
 function countUp() {
     messageLength.innerHTML = textInput.value.length
@@ -29,6 +72,7 @@ function makeTextLowerCase() {
 function makeTextUpperCase() {
     upperCaseText.value = textInput.value.toUpperCase();
 }
+
 
 
 // const checkIfEbru = () => {
@@ -57,5 +101,6 @@ textInput.addEventListener("input", countDown);
 textInput.addEventListener("input", wordCounter);
 textInput.addEventListener("input", makeTextLowerCase);
 textInput.addEventListener("input", makeTextUpperCase);
+
 // textInput.addEventListener("input", checkIfEbru);
 // textInput.addEventListener("input", checkIfPiglet);
