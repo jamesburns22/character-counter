@@ -73,34 +73,8 @@ function makeTextUpperCase() {
     upperCaseText.value = textInput.value.toUpperCase();
 }
 
-
-
-// const checkIfEbru = () => {
-//     const mainMessageLower = textInput.value.toLowerCase();
-//     if (mainMessageLower === "my name is ebru") {
-//         showIfEbru.classList.replace("ebru-false", "ebru-true")
-//         showIfEbru.hidden = false;
-//     } else (
-//         showIfEbru.classList.replace("ebru-true", "ebru-false")
-//     );
-// }
-
-// const checkIfPiglet = () => {
-//     const mainMessageLower = textInput.value.toLowerCase()
-//     if (mainMessageLower === "my name is piglet") {
-//         showIfPiglet.classList.replace("piglet-false", "piglet-true")
-//         showIfEbru.hidden = true;
-
-//     } else (
-//         showIfPiglet.classList.replace("piglet-true", "piglet-false")
-//     );
-// }
-
 textInput.addEventListener("input", countUp);
 textInput.addEventListener("input", countDown);
 textInput.addEventListener("input", wordCounter);
 textInput.addEventListener("input", makeTextLowerCase);
 textInput.addEventListener("input", makeTextUpperCase);
-
-// textInput.addEventListener("input", checkIfEbru);
-// textInput.addEventListener("input", checkIfPiglet);
